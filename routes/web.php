@@ -23,3 +23,8 @@ Route::get('/', function ()  {
     return view("$theme.index");
 });
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
